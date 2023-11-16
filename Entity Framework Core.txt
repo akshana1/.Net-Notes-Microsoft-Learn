@@ -1,0 +1,66 @@
+Introduction to Entity Framework Core
+ORM Framework:
+
+EF Core is an Object-Relational Mapping (ORM) framework for .NET applications.
+Bridges the gap between the application's object-oriented model and the database's relational model.
+Cross-Platform and Lightweight:
+
+Designed to work on multiple platforms (Windows, macOS, Linux).
+Lighter and more modular compared to its predecessor, Entity Framework 6.
+Basic Concepts
+DbContext:
+
+Represents a session with the database, handling connections and transactions.
+Contains DbSet<T> properties representing the database tables/entities.
+Entities:
+
+C# classes representing database tables.
+Properties of entities map to columns in the database.
+Configuration:
+
+Fluent API or Data Annotations used for configuring entity relationships, column types, etc.
+CRUD Operations
+Querying Data:
+
+LINQ (Language Integrated Query) used for querying databases in EF Core.
+Supports querying using LINQ methods or query syntax against entity sets.
+Adding and Updating Data:
+
+DbContext methods such as Add(), Attach(), Update() used for adding/updating entities.
+Change tracking automatically manages updates to the database.
+Deleting Data:
+
+Remove() method in DbContext used for deleting entities.
+Cascading delete behavior configurable for relationships.
+Migrations and Database Schema Management
+Migrations:
+
+Automatic or explicit creation of migration files to track changes in the data model.
+Applying migrations using the dotnet ef migrations command.
+Database Creation and Updates:
+
+Database created or updated based on the defined entity models.
+Ability to apply migrations to update the database schema without data loss.
+Advanced Features
+Relationships:
+
+Configuring one-to-one, one-to-many, and many-to-many relationships between entities.
+Handling navigation properties and their configurations.
+Query Performance Optimization:
+
+Techniques like eager loading, lazy loading, and explicit loading to optimize queries.
+Use of Include(), ThenInclude(), and AsNoTracking() methods.
+Transactions:
+
+Managing transactions using TransactionScope or explicit BeginTransaction() methods.
+Ensuring atomicity and consistency of database operations.
+Additional Considerations
+Logging and Error Handling:
+
+Logging EF Core queries and operations for debugging purposes.
+Handling exceptions and error states in EF Core operations.
+Cross-cutting Concerns:
+
+Implementing validation, authorization, and caching in EF Core operations.
+Utilizing dependency injection and services for reusable functionalities.
+EF Core serves as a powerful ORM framework simplifying database interactions 
